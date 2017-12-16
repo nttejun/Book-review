@@ -5,7 +5,7 @@ import java.util.*;
 
 // 실행시점에 결과를 선택하는 경우라면 옳지않은 방법
 // 컴파일 시점 인자의 자료를 근거로 선택한다
-public class BadCaseOverloding {
+public class BadCaseOverloading {
     public static String classify(Set<?> set) {
         return "Set";
     }
@@ -14,8 +14,18 @@ public class BadCaseOverloding {
         return "List";
     }
 
+    // 기존방식
     public static String classify(Collection<?> collection) {
         return "Unknown Collection";
+    }
+
+    // 오버로딩을 사용해야 한다면 개선한 방안
+    public static String classifyCheck(Collection<?> collection) {
+
+        // 타입체크 추가
+        return collection instanceof Set ? "Set" :
+                collection instanceof List ? "List" : "Unknown Collection";
+
     }
 
     public static void main(String[] args) {
@@ -25,9 +35,13 @@ public class BadCaseOverloding {
                 new HashMap<String, String>().values()
         };
 
-        // three times print collection
-        for(Collection<?> collection : collections)
+        // 기본방식 three times print collection
+        for (Collection<?> collection : collections)
             System.out.println(classify(collection));
+
+        // 개선방안 after type check print collection
+        for (Collection<?> collection : collections)
+            System.out.println(classifyCheck(collection));
     }
 }
 
