@@ -3,8 +3,9 @@ package rule41;
 import java.math.BigInteger;
 import java.util.*;
 
-// bad case
-public class BadOverloding {
+// 실행시점에 결과를 선택하는 경우라면 옳지않은 방법
+// 컴파일 시점 인자의 자료를 근거로 선택한다
+public class BadCaseOverloding {
     public static String classify(Set<?> set) {
         return "Set";
     }
