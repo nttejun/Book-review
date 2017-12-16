@@ -1,5 +1,6 @@
 package rule41;
 
+// 오버라이딩은 실행시점에 인자의 자료를 근거로 선택한다
 class Beer {
 
     String name() {
@@ -22,8 +23,6 @@ class Bigwave extends Beer {
     }
 }
 
-// 실행시점에 결과를 선택하는 경우라면 옳은 방법
-// 실행시점에 인자의 자료를 근거로 선택한다
 public class GoodCaseOverridden {
 
     public static void main(String args[]) {
