@@ -4,7 +4,7 @@ import java.math.BigInteger;
 import java.util.*;
 
 // bad case
-public class Overloding {
+public class BadOverloding {
     public static String classify(Set<?> set) {
         return "Set";
     }
