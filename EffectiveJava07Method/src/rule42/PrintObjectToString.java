@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class PrintObjectToString {
     public static void main(String[] args){
-
         int[] digits = {1, 2, 3, 4};
 
         // Arrays.asList
@@ -17,6 +16,6 @@ public class PrintObjectToString {
         // Arrays.toString
         // 자바 1.5 부터 배열을 문자열로 출력 가능
         System.out.println(Arrays.toString(digits));    // [1, 2, 3, 4]
- 
+
     }
 }
