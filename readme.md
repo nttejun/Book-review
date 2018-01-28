@@ -18,11 +18,18 @@
 
 ---
 
+
+<h3> 리눅스 </h3>
+
+- 리눅스 커널 내부구조 [참고](http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788909144438)
+
+<br>
+
+---
+
+
 <h3> 자바 </h3>
 
 - Effective Java [참고](http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788966261161)
 
 <br>
-
-
----
