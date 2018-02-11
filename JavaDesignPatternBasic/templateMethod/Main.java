@@ -7,8 +7,8 @@ public class Main {
 		DisplayAbstraction displayB = new ExpressAbstraction("가1111");
 		DisplayAbstraction displayC = new ExpressAbstraction("가1234");
 		
-		displayA.print();
-		displayB.print();
-		displayC.print();
+		displayA.display();
+		displayB.display();
+		displayC.display();
 	}
 }

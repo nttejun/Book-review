@@ -10,9 +10,7 @@ public class NomalAbstraction extends DisplayAbstraction {
 
 	@Override
 	public void print() {
-		start();
 		System.out.println("이번열차 " + race + "는 일반열차입니다");
-		end();
 	}
 
 	@Override

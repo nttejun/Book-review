@@ -11,17 +11,11 @@ public class ExpressAbstraction extends DisplayAbstraction {
 
 	@Override
 	public void print() {
-
-		start();
-		
 		if(chkNomalAndExpress() == true) {
 			System.out.println("이번열차 " + race + "는 급행열차입니다");
 		} else {
 			System.out.println("이번열차 " + race + "는 일반열차입니다");
 		}
-		
-		end();
-	
 	}
 	
 	@Override
