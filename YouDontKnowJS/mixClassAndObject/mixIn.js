@@ -37,7 +37,7 @@ var Vehicle = {
 var Car = mixin(Vehicle, {
 
 	// Car 객체는 기본 설정된 바퀴 수를 사용하므로 별도 wheels 값을 할당하지 않았다
-	// 호출할 대상을 .call() 사용으로 명시했다
+	// 호출할 대상을 .call() 사용으로 Car.drive() 라는 것을 명시했다
 	drive: function(){
 		Vehicle.drive.call(this);
 		console.log(this.wheels + " wheels work");
