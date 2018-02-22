@@ -1,4 +1,4 @@
-// mixin 사용으로 Vehicle 기능을 상속받은 하위클래스가 Vehicle 기능을 모두 사용할 수 있다 ( =extend() 상속기능과 동일 )
+// mixin 사용으로 Vehicle 기능을 상속받은 하위클래스가 Vehicle 기능을 모두 사용할 수 있다 ( = JS Lib, JS Framework애서 칭하는 extend() 상속기능과 동일 )
 function mixin(sourceObj, targetObj){
 		
 		// check targetObj
@@ -10,7 +10,6 @@ function mixin(sourceObj, targetObj){
 		for(var key in sourceObj){
 			console.log("sourceObj " + key);
 
-			// mixin result save
 			if(!(key in targetObj)){
 				targetObj[key] = sourceObj[key];
 			}
@@ -18,11 +17,12 @@ function mixin(sourceObj, targetObj){
 		
 		console.log(" ");
 		
-	return sourceObj;
+	return targetObj;
 }
 
 var Vehicle = {
 		engines: 1,
+		wheels: 4,
 		
 		ignition: function(){
 			console.log("engine on");
@@ -35,7 +35,9 @@ var Vehicle = {
 };
 
 var Car = mixin(Vehicle, {
-	wheels: 4,
+
+	// Car 객체는 기본 설정된 바퀴 수를 사용하므로 별도 wheels 값을 할당하지 않았다
+	// 호출할 대상을 .call() 사용으로 명시했다
 	drive: function(){
 		Vehicle.drive.call(this);
 		console.log(this.wheels + " wheels work");
@@ -45,14 +47,13 @@ var Car = mixin(Vehicle, {
 var Bike = mixin(Vehicle, {
 	wheels: 2,
 	drive: function(){
-		Vehicle.drive.call(this);
+		Vehicle.drive();
 		console.log(this.wheels + " wheels work");
 	}
 });
 
 var None = mixin(Vehicle, {
 	engines: 0,
-	
 	drive: function(){
 		Vehicle.drive.call(this);
 		console.log(this.engines + " engines work");
