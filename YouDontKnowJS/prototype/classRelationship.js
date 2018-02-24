@@ -24,3 +24,17 @@ console.log(a.isPrototypeOf(b));
 
 // Class relationship investigation : Case4
 console.log(Object.getPrototypeOf(a) === Foo.prototype);
+
+// Class relationship investigation : Case5
+console.log(a.__proto__ === Foo.prototype);
+
+// __proto__ 실체 구현체로 추정 
+Object.defineProperty(Object.prototyp, "__proto__",{
+	get: function(){
+		return Object.getPrototypeOf(this);
+	},
+	set: function(o){
+		Object.setPrototypeOf(this, o);
+		return o;
+	}
+});
