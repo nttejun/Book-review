@@ -21,3 +21,6 @@ console.log(Foo.prototype.isPrototypeOf(a));
 // Class relationship investigation : Case3
 // Case1의 isRelatedTo()를 isPrototype() 이름으로 자바스크립트 언어로 내장시킨 것과 같다
 console.log(a.isPrototypeOf(b));
+
+// Class relationship investigation : Case4
+console.log(Object.getPrototypeOf(a) === Foo.prototype);
