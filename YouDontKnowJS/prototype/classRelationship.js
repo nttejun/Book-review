@@ -29,7 +29,7 @@ console.log(Object.getPrototypeOf(a) === Foo.prototype);
 console.log(a.__proto__ === Foo.prototype);
 
 // __proto__ 실체 구현체로 추정 
-Object.defineProperty(Object.prototyp, "__proto__",{
+Object.defineProperty(Object.prototype, "__proto__",{
 	get: function(){
 		return Object.getPrototypeOf(this);
 	},
