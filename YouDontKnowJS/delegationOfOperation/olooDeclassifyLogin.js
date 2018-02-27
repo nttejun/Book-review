@@ -1,3 +1,4 @@
+// 탈클래스화 객체 위임
 var LoginController = {
     errors: [],
     getUser: function(){
