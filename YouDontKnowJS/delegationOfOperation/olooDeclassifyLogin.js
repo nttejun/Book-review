@@ -37,6 +37,8 @@ var LoginController = {
 
 var AuthController = Object.create(LoginController);
 AuthController.errors = [];
+
+//DB서버 검증
 AuthController.checkAuth = function(){
     var user = this.getUser();
     var pw = this.getPassword();
