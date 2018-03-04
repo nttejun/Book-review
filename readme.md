@@ -40,5 +40,8 @@
 
 <h3> 자바스크립트 </h3>
 
-- You Don't Know JS this와 객체 프로토타입, 비동기와 성능 [참고](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788968488535&orderClick=JAj)
--
+- You Don't Know JS (this와 객체 프로토타입, 비동기와 성능) [참고](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788968488535&orderClick=JAj)
+
+<br>
+
+---
