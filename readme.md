@@ -31,5 +31,14 @@
 <h3> 자바 </h3>
 
 - Effective Java [참고](http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788966261161)
+- JAVA 언어로 배우는 디자인 패턴 입문 [참고](http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788931436914)
 
 <br>
+
+---
+
+
+<h3> 자바스크립트 </h3>
+
+- You Don't Know JS this와 객체 프로토타입, 비동기와 성능 [참고](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788968488535&orderClick=JAj)
+-
