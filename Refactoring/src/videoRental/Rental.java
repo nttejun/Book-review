@@ -4,25 +4,25 @@ public class Rental {
     private Movie _moive;
     private int _daysRented;
 
-    public Rental(Movie movie, int daysRented){
+    public Rental(Movie movie, int daysRented) {
         this._moive = movie;
         this._daysRented = daysRented;
     }
 
-    public int get_daysRented(){
+    public int get_daysRented() {
         return _daysRented;
     }
 
-    public Movie get_moive(){
+    public Movie get_moive() {
         return _moive;
     }
 
-    public double getCharge(){
+    public double getCharge() {
         double result = 0;
-        switch (get_moive().get_priceCode()){
+        switch (get_moive().get_priceCode()) {
             case Movie.REGULAR:
                 result += 2;
-                if(get_daysRented() > 2)
+                if (get_daysRented() > 2)
                     result += (get_daysRented() - 2) * 1.5;
                 break;
             case Movie.NEW_RELEASE:
@@ -30,10 +30,17 @@ public class Rental {
                 break;
             case Movie.CHILDREN:
                 result += 1.5;
-                if(get_daysRented() > 3)
+                if (get_daysRented() > 3)
                     result += (get_daysRented() - 3) * 1.5;
                 break;
         }
         return result;
+    }
+
+    public int get_frequentRenterPoints() {
+        if ((get_moive().get_priceCode() == Movie.NEW_RELEASE) && get_daysRented() > 1)
+            return 2;
+        else
+            return 1;
     }
 }
