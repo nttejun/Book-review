@@ -24,7 +24,7 @@ public class Customer {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration rentals = _rentals.elements();
-        String result = get_name() + "님의 대여기록 " + "\n";
+        String result = get_name() + "님의 대여기록 " + "\n";//1
 
         while (rentals.hasMoreElements()) {
             double thisAmount = 0;
@@ -33,12 +33,9 @@ public class Customer {
             // 대여료 계산
             thisAmount = each.getCharge();
 
-            // 적립포인트 1증가
-            frequentRenterPoints++;
+            // 적립포인트 계산
+            frequentRenterPoints += each.get_frequentRenterPoints();
 
-            if ((each.get_moive().get_priceCode() == Movie.NEW_RELEASE) && each.get_daysRented() > 1) {
-                frequentRenterPoints++;
-            }
             result += "\t" + each.get_moive().get_title() + "\t" + String.valueOf(thisAmount) + "\n";
 
             totalAmount += thisAmount;
