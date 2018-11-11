@@ -6,7 +6,6 @@ import org.springframework.security.web.context.AbstractSecurityWebApplicationIn
 
 @Configuration
 public class TodoSecurityInitializer extends AbstractSecurityWebApplicationInitializer {
-
     public TodoSecurityInitializer(){
         super(TodoSecurityConfig.class);
     }
