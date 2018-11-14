@@ -6,6 +6,13 @@ public class Vehicle {
     private int wheel;
     private int seat;
 
+    public Vehicle(String vehicleNo, String color, int wheel, int seat) {
+        this.vehicleNo = vehicleNo;
+        this.color = color;
+        this.wheel = wheel;
+        this.seat = seat;
+    }
+
     public String getVehicleNo() {
         return vehicleNo;
     }
